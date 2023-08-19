@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* App.css */
+.person-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  max-width: 1000px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.person-card:hover {
+  transform: translateY(-4px);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 300px; /* Adjust the width as needed */
+  margin-right: 20px; /* Add spacing between input and cards */
+  margin-top: 10px; /* Add some top margin for spacing */
 }
 
-.App-link {
-  color: #61dafb;
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* App.css */
+.person-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards as needed */
+  justify-content: flex-start; /* Align cards to the left */
+  max-width: 600px;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #f5f5f5; /* Choose a background color */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5; /* Choose a background color */
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.auth-buttons {
+  display: flex;
+  gap: 10px;
 }

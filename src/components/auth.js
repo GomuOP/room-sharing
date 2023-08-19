@@ -1,24 +1,33 @@
+import React from "react";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, googleProvider } from "../config/firebase";
-export const Auth=()=>{
-    const signInWithGoogle = async () =>{
-        try{
+import "./Auth.css"; // Import your CSS file for styling
+
+export const Auth = () => {
+    const signInWithGoogle = async () => {
+        try {
             await signInWithPopup(auth, googleProvider);
-        }catch(err){
+        } catch (err) {
             console.error(err);
         }
-    }
-    const logout = async () =>{
-        try{
+    };
+
+    const logout = async () => {
+        try {
             await signOut(auth);
-        }catch(err){
+        } catch (err) {
             console.error(err);
         }
-    }
-    return(
-        <div>
-            <button onClick={signInWithGoogle}>Sign In With Google</button>
-            <button onClick={logout}>Sign Out</button>
+    };
+
+    return (
+        <div className="auth-container">
+            <button className="google-signin-button" onClick={signInWithGoogle}>
+                Sign In With Google
+            </button>
+            <button className="signout-button" onClick={logout}>
+                Sign Out
+            </button>
         </div>
     );
-}
+};
